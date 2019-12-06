@@ -17,6 +17,14 @@ fn main() {
 		let n: i32 = n.trim().parse().expect("Please input a number!");
 		let mut d: i32 = 0;
 		let mut cpn: i32 = n;
+		if (n == 0) {
+			println!("0 is an Armstrong number because 0^1 = 0");
+			continue;
+		}
+		else if (n < 0) {
+			println!("{} is not an Armstrong number because {} < 0", n, n);
+			continue;
+		}
 		while (cpn > 0) {
 			d = d + 1;
 			cpn = cpn / 10;
@@ -36,7 +44,7 @@ fn main() {
 			println!("{} is an Armstrong number because {} = {}", n, s, n);
 		}
 		else {
-			println!("{} is not an Armstrong number becase {} = {}", n, s, ans);
+			println!("{} is not an Armstrong number because {} = {}", n, s, ans);
 		}
 	}
 }
